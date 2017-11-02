@@ -2,10 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86712fac-e944-40de-bfc3-c4c469651fda" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/model/ContentBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/controller/PlotController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/PlotWindow.fxml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/3200.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/BG40.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/HumanVision.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/IMX265LQR_BLUE.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/IMX265LQR_GREEN.csv" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/IMX265LQR_RED.csv" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/3200.csv" afterPath="$PROJECT_DIR$/src/main/resources/3200/3200.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/BG40.csv" afterPath="$PROJECT_DIR$/src/main/resources/Filters/BG40.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/HumanVision.csv" afterPath="$PROJECT_DIR$/src/main/resources/HumanVision/HumanVision.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/IMX265LQR_BLUE.csv" afterPath="$PROJECT_DIR$/src/main/resources/Sensors/IMX265LQR_BLUE.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/IMX265LQR_GREEN.csv" afterPath="$PROJECT_DIR$/src/main/resources/Sensors/IMX265LQR_GREEN.csv" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/IMX265LQR_RED.csv" afterPath="$PROJECT_DIR$/src/main/resources/Sensors/IMX265LQR_RED.csv" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/Main.class" afterPath="$PROJECT_DIR$/target/classes/ru/nt202/Main.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/controller/Controller.class" afterPath="$PROJECT_DIR$/target/classes/ru/nt202/controller/Controller.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/model/Content.class" afterPath="$PROJECT_DIR$/target/classes/ru/nt202/model/Content.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/Main.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/controller/Controller.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/model/Content.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/model/Content.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" />
@@ -26,8 +41,8 @@
       <file leaf-file-name="Controller.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/controller/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="79" column="41" lean-forward="true" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+            <state relative-caret-position="3800">
+              <caret line="247" column="32" lean-forward="true" selection-start-line="247" selection-start-column="32" selection-end-line="247" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,10 +50,49 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PlotController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/controller/PlotController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-39">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
+                <element signature="e#561#562#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlotWindow.fxml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/PlotWindow.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="100">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="ContentBuilder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/model/ContentBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="341">
               <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
               <folding />
             </state>
@@ -48,7 +102,7 @@
       <file leaf-file-name="CSVReader.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/model/CSVReader.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="861">
+            <state relative-caret-position="880">
               <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -59,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Content.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Content.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/model/Content.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="60" column="41" lean-forward="true" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+            <state relative-caret-position="267">
+              <caret line="63" column="6" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -94,14 +148,16 @@
         <option value="$PROJECT_DIR$/src/main/java/ru/nt202/sample/sample.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/nt202/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/main/resources/sample.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/ru/nt202/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/nt202/model/CSVReader.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/nt202/ImageToValues.java" />
         <option value="$PROJECT_DIR$/src/main/resources/ChartLineStyle.css" />
         <option value="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" />
         <option value="$PROJECT_DIR$/src/main/java/ru/nt202/model/ContentBuilder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nt202/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/nt202/controller/Controller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ru/nt202/controller/PlotController.java" />
         <option value="$PROJECT_DIR$/src/main/java/ru/nt202/model/Content.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/PlotWindow.fxml" />
       </list>
     </option>
   </component>
@@ -331,6 +387,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/Sensors" />
+      <recent name="$PROJECT_DIR$/src/main/resources/HumanVision" />
+      <recent name="$PROJECT_DIR$/src/main/resources/Filters" />
+      <recent name="$PROJECT_DIR$/src/main/resources/3200" />
       <recent name="$PROJECT_DIR$/src/main/resources" />
     </key>
   </component>
@@ -842,12 +902,12 @@
       <workItem from="1509465619911" duration="10588000" />
       <workItem from="1509536419791" duration="27096000" />
       <workItem from="1509572486105" duration="799000" />
-      <workItem from="1509620707310" duration="7632000" />
+      <workItem from="1509620707310" duration="20153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46115000" />
+    <option name="totallyTimeSpent" value="58636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -875,7 +935,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49582636" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3305509" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2989378" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3596358" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -961,7 +1021,7 @@
         <state relative-caret-position="200">
           <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding>
-            <marker date="1509630781365" expanded="true" signature="13074:13089" ph="..." />
+            <marker date="1509648069040" expanded="true" signature="13411:13426" ph="..." />
           </folding>
         </state>
       </provider>
@@ -991,6 +1051,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1022,6 +1083,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1058,7 +1122,7 @@
         <state relative-caret-position="115">
           <caret line="116" column="14" lean-forward="false" selection-start-line="116" selection-start-column="14" selection-end-line="116" selection-end-column="14" />
           <folding>
-            <marker date="1509630781365" expanded="true" signature="13074:13089" ph="..." />
+            <marker date="1509648069040" expanded="true" signature="13411:13426" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1066,16 +1130,9 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="23" column="59" lean-forward="false" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/model/CSVReader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="861">
+        <state relative-caret-position="880">
           <caret line="50" column="44" lean-forward="true" selection-start-line="50" selection-start-column="44" selection-end-line="50" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1085,30 +1142,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/model/ContentBuilder.java">
+    <entry file="jar:///usr/lib/jvm/java-8-oracle/javafx-src.zip!/com/sun/javafx/tk/quantum/QuantumToolkit.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+        <state relative-caret-position="271">
+          <caret line="388" column="0" lean-forward="false" selection-start-line="388" selection-start-column="0" selection-end-line="388" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/controller/PlotController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-39">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/controller/Controller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="79" column="41" lean-forward="true" selection-start-line="79" selection-start-column="41" selection-end-line="79" selection-end-column="41" />
+        <state relative-caret-position="3800">
+          <caret line="247" column="32" lean-forward="true" selection-start-line="247" selection-start-column="32" selection-end-line="247" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/model/Content.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="60" column="41" lean-forward="true" selection-start-line="60" selection-start-column="41" selection-end-line="60" selection-end-column="41" />
+        <state relative-caret-position="100">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/model/ContentBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="83" column="0" lean-forward="true" selection-start-line="83" selection-start-column="0" selection-end-line="83" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ru/nt202/model/Content.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="63" column="6" lean-forward="false" selection-start-line="63" selection-start-column="6" selection-end-line="63" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/PlotWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
   </component>

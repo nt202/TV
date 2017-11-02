@@ -3,31 +3,30 @@ package ru.nt202.model;
 import java.util.ArrayList;
 
 public class Content {
-    private double noise = 2; // количество шумовых электронов
-    private double Ap = 11; // площадь пикселя [мкм^2]
-    private double snr = 6; // отношения сигнал/шум [дБ]
+    private static double noise = 2; // количество шумовых электронов
+    private static double Ap = 11; // площадь пикселя [мкм^2]
+    private static double snr = 6; // отношения сигнал/шум [дБ]
 
-    private double ro = 0.89; // коэффициент отражения объекта
-    private double K = 1; // коэффициент передачи истокового повторителя в случае матричного ПЗС
-    private double time = 20; // [мс]
+    private static double ro = 0.89; // коэффициент отражения объекта
+    private static double K = 1; // коэффициент передачи истокового повторителя в случае матричного ПЗС
+    private static double time = 20; // [мс]
 
-    private double df = 0.714; // относительное отверстие объектива
+    private static double df = 0.714; // относительное отверстие объектива
     // D – входной зрачок объектива, f – фокусное расстояние
 
-    private double tau = 0.9; // коэффициент пропускания объектива
+    private static double tau = 0.9; // коэффициент пропускания объектива
     // или же коэффициент усиления встроенного усилителя в КМОП-сенсоре
 
-    private final double h = 6.63 * Math.pow(10, -34); // постоянная Планка [Дж*с]
-    private final double k = 683; // фотометрический коэффициент [лм/Вт]
-    private final double c = 3 * Math.pow(10, 8); // скорость света
+    private static final double h = 6.63 * Math.pow(10, -34); // постоянная Планка [Дж*с]
+    private static final double k = 683; // фотометрический коэффициент [лм/Вт]
+    private static final double c = 3 * Math.pow(10, 8); // скорость света
+    private static final double d = 5 * Math.pow(10, -9);
 
-    private ArrayList<Double> F;
-    private ArrayList<Double> Nu;
-    private ArrayList<Double> TauIR;
-    private ArrayList<Double> Teta;
-    private ArrayList<Integer> Lambda;
-
-    double I;
+    private static ArrayList<Double> F;
+    private static ArrayList<Double> Nu;
+    private static ArrayList<Double> TauIR;
+    private static ArrayList<Double> Teta;
+    private static ArrayList<Integer> Lambda;
 
     public Content(double noise, double Ap, double snr, double ro, double K, double time, double df, double tau,
                    ArrayList<Double> F, ArrayList<Double> Nu, ArrayList<Double> TauIR, ArrayList<Double> Teta, ArrayList<Integer> Lambda) {
@@ -46,20 +45,35 @@ public class Content {
         this.Lambda = Lambda;
     }
 
-    public void calculateE() {
+    public double calculateE() {
+        double I;
 
-        double E = (4 * 10 * Math.log10(snr) * noise * h * c * k) /
-                (ro * tau * Math.pow(df, 2) * K * Ap * time);
+        double E = (4 * Math.pow(10, snr / 20) * noise * h * c * k) /
+                (ro * tau * Math.pow(df, 2) * K * Ap * Math.pow(10, -12) * time * Math.pow(10, -3));
 
-//        int d = 5;
-//        int sum1 = 0;
-//
-//        for (int i = 0; i < n; i++) {
-//            sum1 += d*F[i];
-//        }
-        for (int i = 0; i < F.size(); i++) {
-            System.out.println(F.get(i));
+        double nominator = 0;
+        double denominator = 0;
+
+        for (int i = 0; i < Lambda.size(); i++) {
+            nominator += d * F.get(i) * Nu.get(i) * TauIR.get(i);
+            denominator += d * Lambda.get(i) * Math.pow(10, -9) * F.get(i) * TauIR.get(i) * Teta.get(i);
         }
 
+        I = nominator / denominator;
+
+        E = E * I;
+        return E;
+    }
+
+    public static double calculateFi(double e) {
+        double res = (e * ro * tau * Math.pow(df, 2) * K * Ap * Math.pow(10, -12) * time * Math.pow(10, -3)) /
+                (4 * noise * h * c * k);
+        double nominator = 0;
+        double denominator = 0;
+        for (int i = 0; i < Lambda.size(); i++) {
+            nominator += d * Lambda.get(i) * Math.pow(10, -9) * F.get(i) * TauIR.get(i) * Teta.get(i);
+            denominator += d * F.get(i) * Nu.get(i) * TauIR.get(i);
+        }
+        return 20*Math.log10(res*nominator/denominator);
     }
 }

@@ -83,7 +83,7 @@
                </children></AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="541.0">
                <children>
-                  <Accordion>
+                  <Accordion prefHeight="598.0" prefWidth="533.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                     <panes>
                       <TitledPane animated="false" text="Кривая чувствительности зрительного анализатора">
                            <content>
@@ -97,7 +97,7 @@
                               </LineChart>
                            </content>
                            <graphic>
-                              <Button mnemonicParsing="false" text="Загрузить" />
+                              <Button mnemonicParsing="false" onMouseClicked="#openHumanVision" text="Загрузить" />
                            </graphic>
                         </TitledPane>
                       <TitledPane animated="false" text="Спектральные характеристики источника белого (3200 K)">
@@ -112,7 +112,7 @@
                               </LineChart>
                            </content>
                            <graphic>
-                              <Button mnemonicParsing="false" text="Загрузить" />
+                              <Button mnemonicParsing="false" onMouseClicked="#open3200" text="Загрузить" />
                            </graphic>
                         </TitledPane>
                         <TitledPane animated="false" layoutX="10.0" layoutY="36.0" text="Фильтр ИК-отсечки">
@@ -127,7 +127,7 @@
                               </LineChart>
                            </content>
                            <graphic>
-                              <Button mnemonicParsing="false" text="Загрузить" />
+                              <Button mnemonicParsing="false" onMouseClicked="#openIRFilter" text="Загрузить" />
                            </graphic>
                         </TitledPane>
                         <TitledPane animated="false" layoutX="10.0" layoutY="525.0" text="Квантовая эффективность канала">
@@ -142,7 +142,7 @@
                               </LineChart>
                            </content>
                            <graphic>
-                              <Button mnemonicParsing="false" text="Загрузить" />
+                              <Button mnemonicParsing="false" onMouseClicked="#openSensor" text="Загрузить" />
                            </graphic>
                         </TitledPane>
                     </panes>
@@ -169,14 +169,14 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                      <children>
-                        <TextField editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="180.0" translateX="50.0" GridPane.rowIndex="4" />
+                        <TextField fx:id="resultE" editable="false" maxWidth="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="180.0" translateX="50.0" GridPane.rowIndex="4" />
                         <Label text="Eп = " GridPane.rowIndex="4" />
                         <Label text="Минимум освещенности" GridPane.rowIndex="7" />
                         <Label text="Максимум освещенности" GridPane.rowIndex="8" />
                         <Button mnemonicParsing="false" onAction="#calculateE" text="Рассчитать пороговую чувствительность" />
-                        <Button mnemonicParsing="false" text="Построить зависимость Ψ(E)" GridPane.rowIndex="9" />
-                        <TextField maxWidth="180.0" minWidth="180.0" prefWidth="180.0" translateX="180.0" GridPane.rowIndex="7" />
-                        <TextField maxWidth="180.0" minWidth="180.0" prefWidth="180.0" translateX="180.0" GridPane.rowIndex="8" />
+                        <Button mnemonicParsing="false" onAction="#createPlot" text="Построить зависимость Ψ(E)" GridPane.rowIndex="9" />
+                        <TextField fx:id="Emin" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" translateX="180.0" GridPane.rowIndex="7" />
+                        <TextField fx:id="Emax" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" translateX="180.0" GridPane.rowIndex="8" />
                         <ImageView fitHeight="181.0" fitWidth="438.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
                            <image>
                               <Image url="@Formula.png" />
