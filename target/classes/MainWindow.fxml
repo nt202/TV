@@ -45,15 +45,15 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <TextField GridPane.columnIndex="1" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                        <TextField fx:id="snr" text="6" GridPane.columnIndex="1" />
+                        <TextField fx:id="noise" text="2" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="ro" text="0.89" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="tau" text="0.9" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="df" text="0.714285714" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <TextField fx:id="K" text="1" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                        <TextField fx:id="time" text="20" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                        <TextField fx:id="dx" text="3.45" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                        <TextField fx:id="dy" text="3.45" GridPane.columnIndex="1" GridPane.rowIndex="8" />
                         <Label text="Ψ" />
                         <Label text="Nш" GridPane.rowIndex="1" />
                         <Label text="ρ" GridPane.rowIndex="2" />
@@ -67,7 +67,7 @@
                         <Label text="h" GridPane.rowIndex="11" />
                         <Label text="c" GridPane.rowIndex="12" />
                         <Label text="Ap" GridPane.rowIndex="9" />
-                        <CheckBox mnemonicParsing="false" text="x2" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                        <CheckBox mnemonicParsing="false" text="x2" GridPane.columnIndex="1" GridPane.rowIndex="9" fx:id="x2" />
                         <Label text="683" GridPane.columnIndex="1" GridPane.rowIndex="10" />
                         <Label text="6.63e-34" GridPane.columnIndex="1" GridPane.rowIndex="11" />
                         <Label text="3e8" GridPane.columnIndex="1" GridPane.rowIndex="12" />
@@ -173,7 +173,7 @@
                         <Label text="Eп = " GridPane.rowIndex="4" />
                         <Label text="Минимум освещенности" GridPane.rowIndex="7" />
                         <Label text="Максимум освещенности" GridPane.rowIndex="8" />
-                        <Button mnemonicParsing="false" text="Рассчитать пороговую чувствительность" />
+                        <Button mnemonicParsing="false" onAction="#calculateE" text="Рассчитать пороговую чувствительность" />
                         <Button mnemonicParsing="false" text="Построить зависимость Ψ(E)" GridPane.rowIndex="9" />
                         <TextField maxWidth="180.0" minWidth="180.0" prefWidth="180.0" translateX="180.0" GridPane.rowIndex="7" />
                         <TextField maxWidth="180.0" minWidth="180.0" prefWidth="180.0" translateX="180.0" GridPane.rowIndex="8" />
