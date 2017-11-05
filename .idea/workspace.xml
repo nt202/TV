@@ -1,51 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86712fac-e944-40de-bfc3-c4c469651fda" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/3200/3200.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ChartLineStyle.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Filters/BG40.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Formula.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/HumanVision/HumanVision.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/MainWindow.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/PlotWindow.fxml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Sensors/IMX265LQR_BLUE.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Sensors/IMX265LQR_GREEN.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/Sensors/IMX265LQR_RED.csv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/ImageToValues.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/controller/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/controller/PlotController.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/model/CSVReader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/model/Content.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/model/ContentBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/sample/Controller.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/ru/nt202/sample/Main.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/лаба 1/.~lock.Статья Баранов-Манцветов от 10 марта.doc#" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/ImageToValues.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/ImageToValues.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/Main.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/controller/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/controller/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/controller/PlotController.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/controller/PlotController.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/model/CSVReader.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/model/CSVReader.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/model/Content.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/model/Content.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/model/ContentBuilder.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/model/ContentBuilder.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/sample/Controller.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/sample/Controller.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/ru/nt202/sample/Main.java" afterPath="$PROJECT_DIR$/src/main/java/ru/nt202/lab1/sample/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/3200/3200.csv" afterPath="$PROJECT_DIR$/src/main/resources/lab1/3200.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/ChartLineStyle.css" afterPath="$PROJECT_DIR$/src/main/resources/lab1/ChartLineStyle.css" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/Filters/BG40.csv" afterPath="$PROJECT_DIR$/src/main/resources/lab1/BG40.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/Formula.png" afterPath="$PROJECT_DIR$/src/main/resources/lab1/Formula.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/HumanVision/HumanVision.csv" afterPath="$PROJECT_DIR$/src/main/resources/lab1/HumanVision.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/MainWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/lab1/MainWindow.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/PlotWindow.fxml" afterPath="$PROJECT_DIR$/src/main/resources/lab1/PlotWindow.fxml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/Sensors/IMX265LQR_BLUE.csv" afterPath="$PROJECT_DIR$/src/main/resources/lab1/IMX265LQR_BLUE.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/Sensors/IMX265LQR_GREEN.csv" afterPath="$PROJECT_DIR$/src/main/resources/lab1/IMX265LQR_GREEN.csv" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/Sensors/IMX265LQR_RED.csv" afterPath="$PROJECT_DIR$/src/main/resources/lab1/IMX265LQR_RED.csv" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LabTV1.iml" afterPath="$PROJECT_DIR$/LabTV1.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-    </list>
+    <list default="true" id="86712fac-e944-40de-bfc3-c4c469651fda" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -775,12 +731,12 @@
       <workItem from="1509883421168" duration="323000" />
       <workItem from="1509884127313" duration="76000" />
       <workItem from="1509884750315" duration="324000" />
-      <workItem from="1509898947059" duration="569000" />
+      <workItem from="1509898947059" duration="809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78525000" />
+    <option name="totallyTimeSpent" value="78765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -797,10 +753,10 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32888147" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6527546" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5124378" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.51085144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25948405" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25948405" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
