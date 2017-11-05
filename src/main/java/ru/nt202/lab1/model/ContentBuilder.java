@@ -1,4 +1,4 @@
-package ru.nt202.model;
+package ru.nt202.lab1.model;
 
 import java.util.ArrayList;
 

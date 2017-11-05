@@ -1,14 +1,9 @@
-package ru.nt202;
+package ru.nt202.lab1;
 
 import javafx.application.Application;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.chart.LineChart;
-import javafx.scene.chart.NumberAxis;
-import javafx.scene.chart.XYChart;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -34,10 +29,10 @@ public class Main extends Application {
     private void initRootLayout() {
         try {
             FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(Main.class.getClass().getResource("/MainWindow.fxml"));
+            loader.setLocation(Main.class.getClass().getResource("/lab1/MainWindow.fxml"));
 //            rootLayout = loader.load();
 
-            Parent root = FXMLLoader.load(getClass().getResource("/MainWindow.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/lab1/MainWindow.fxml"));
 //            Scene scene = new Scene(rootLayout);
             primaryStage.setScene(new Scene(root));
             primaryStage.show();

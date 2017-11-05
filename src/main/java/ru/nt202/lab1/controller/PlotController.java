@@ -1,10 +1,10 @@
-package ru.nt202.controller;
+package ru.nt202.lab1.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
-import ru.nt202.model.Content;
+import ru.nt202.lab1.model.Content;
 
 import java.net.URL;
 import java.util.ResourceBundle;

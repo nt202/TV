@@ -1,4 +1,4 @@
-package ru.nt202.sample;
+package ru.nt202.lab1.sample;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

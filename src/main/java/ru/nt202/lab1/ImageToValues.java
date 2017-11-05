@@ -1,4 +1,4 @@
-package ru.nt202;
+package ru.nt202.lab1;
 
 import javax.imageio.ImageIO;
 import java.awt.*;

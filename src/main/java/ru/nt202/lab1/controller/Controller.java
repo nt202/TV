@@ -1,4 +1,4 @@
-package ru.nt202.controller;
+package ru.nt202.lab1.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,37 +12,32 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import ru.nt202.Main;
-import ru.nt202.model.CSVReader;
-import ru.nt202.model.Content;
-import ru.nt202.model.ContentBuilder;
+import ru.nt202.lab1.Main;
+import ru.nt202.lab1.model.CSVReader;
+import ru.nt202.lab1.model.Content;
+import ru.nt202.lab1.model.ContentBuilder;
 
-import java.io.File;
+import java.io.*;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-    private Content content;
 
+    private Content content;
     private ArrayList<Double> Nu;
     private ArrayList<Double> F;
     private ArrayList<Double> TauIR;
     private ArrayList<Double> Teta;
     private ArrayList<Integer> Lambda;
 
-    private String filenameHumanVision = CSVReader.class.getResource("/HumanVision/HumanVision.csv").getPath();
-    private String filename3200 = CSVReader.class.getResource("/3200/3200.csv").getPath();
-    private String filenameIRFilter = CSVReader.class.getResource("/Filters/BG40.csv").getPath();
-    private String filenameSensor = CSVReader.class.getResource("/Sensors/IMX265LQR_GREEN.csv").getPath();
-
     public void openHumanVision() {
         try {
-            File file = openFile();
+            String path = openFile();
             HumanVision.getData().clear();
-            HumanVision.getData().addAll(getSeries(file));
+            HumanVision.getData().addAll(getSeries(path));
             HumanVision.setStyle("CHART_COLOR_1: #B57BFF;");
-            Nu = getArray(file);
+            Nu = getArray(path);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -50,11 +45,11 @@ public class Controller implements Initializable {
 
     public void open3200() {
         try {
-            File file = openFile();
+            String path = openFile();
             BlackBody3200.getData().clear();
-            BlackBody3200.getData().addAll(getSeries(file));
+            BlackBody3200.getData().addAll(getSeries(path));
             BlackBody3200.setStyle("CHART_COLOR_1: #000000;");
-            F = getArray(file);
+            F = getArray(path);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -62,11 +57,11 @@ public class Controller implements Initializable {
 
     public void openIRFilter() {
         try {
-            File file = openFile();
+            String path = openFile();
             IRFilter.getData().clear();
-            IRFilter.getData().addAll(getSeries(file));
+            IRFilter.getData().addAll(getSeries(path));
             IRFilter.setStyle("CHART_COLOR_1: #FF0000;");
-            TauIR = getArray(file);
+            TauIR = getArray(path);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -74,15 +69,32 @@ public class Controller implements Initializable {
 
     public void openSensor() {
         try {
-            File file = openFile();
+            String path = openFile();
             Sensor.getData().clear();
-            Sensor.getData().addAll(getSeries(file));
+            Sensor.getData().addAll(getSeries(path));
             Sensor.setStyle("CHART_COLOR_1: #00FF00;");
-            Teta = getArray(file);
+            Teta = getArray(path);
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
+    private String openFile() throws Exception {
+        FileChooser fileChooser = new FileChooser();
+        fileChooser.setTitle("Open Resource File");
+
+        FileChooser.ExtensionFilter extFilter =
+                new FileChooser.ExtensionFilter("CSV files (*.csv)", "*.csv");//Расширение
+        fileChooser.getExtensionFilters().add(extFilter);
+        File file = fileChooser.showOpenDialog(Main.primaryStage);//Указываем текущую сцену CodeNote.mainStage
+        if (file != null) {
+            String path = file.getAbsolutePath();
+            return path;
+        } else {
+            throw new Exception();
+        }
+    }
+
 
     public void createPlot(ActionEvent event) {
         try {
@@ -93,7 +105,7 @@ public class Controller implements Initializable {
                 pc.seteMin(eMin);
                 pc.seteMax(eMax);
                 try {
-                    Parent root = FXMLLoader.load(PlotController.class.getClass().getResource("/PlotWindow.fxml"));
+                    Parent root = FXMLLoader.load(PlotController.class.getClass().getResource("/lab1/PlotWindow.fxml"));
                     Stage stage = new Stage();
                     stage.setTitle("Зависимость отношения сигнал/шум от освещенности на объекте");
                     stage.setScene(new Scene(root));
@@ -106,22 +118,6 @@ public class Controller implements Initializable {
             e.printStackTrace();
         }
 
-    }
-
-
-    private File openFile() throws Exception {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Open Resource File");
-
-        FileChooser.ExtensionFilter extFilter =
-                new FileChooser.ExtensionFilter("CSV files (*.csv)", "*.csv");//Расширение
-        fileChooser.getExtensionFilters().add(extFilter);
-        File file = fileChooser.showOpenDialog(Main.primaryStage);//Указываем текущую сцену CodeNote.mainStage
-        if (file != null) {
-            return file;
-        } else {
-            throw new Exception();
-        }
     }
 
     @FXML
@@ -204,32 +200,46 @@ public class Controller implements Initializable {
     @FXML
     private LineChart<?, ?> Sensor;
 
+    InputStream filenameHumanVision;
+    InputStream filename3200;
+    InputStream filenameIRFilter;
+    InputStream filenameSensor;
+
     @FXML
     public void initialize(URL location, ResourceBundle resources) {
+        try {
+            filenameHumanVision = getClass().getResourceAsStream("/lab1/HumanVision.csv");
+            HumanVision.getData().addAll(getSeries(filenameHumanVision));
+            HumanVision.setStyle("CHART_COLOR_1: #B57BFF;");
+            filenameHumanVision = getClass().getResourceAsStream("/lab1/HumanVision.csv");
+            Nu = getArray(filenameHumanVision);
 
-        HumanVision.getData().addAll(getSeries(new File(filenameHumanVision)));
-        HumanVision.setStyle("CHART_COLOR_1: #B57BFF;");
-        Nu = getArray(new File(filenameHumanVision));
 
+            filename3200 = getClass().getResourceAsStream("/lab1/3200.csv");
+            BlackBody3200.getData().addAll(getSeries(filename3200));
+            BlackBody3200.setStyle("CHART_COLOR_1: #000000;");
+            filename3200 = getClass().getResourceAsStream("/lab1/3200.csv");
+            F = getArray(filename3200);
 
-        BlackBody3200.getData().addAll(getSeries(new File(filename3200)));
-        BlackBody3200.setStyle("CHART_COLOR_1: #000000;");
-        F = getArray(new File(filename3200));
+            filenameIRFilter = getClass().getResourceAsStream("/lab1/BG40.csv");
+            IRFilter.getData().addAll(getSeries(filenameIRFilter));
+            IRFilter.setStyle("CHART_COLOR_1: #FF0000;");
+            filenameIRFilter = getClass().getResourceAsStream("/lab1/BG40.csv");
+            TauIR = getArray(filenameIRFilter);
 
-        IRFilter.getData().addAll(getSeries(new File(filenameIRFilter)));
-        IRFilter.setStyle("CHART_COLOR_1: #FF0000;");
-        TauIR = getArray(new File(filenameIRFilter));
-
-        Sensor.getData().addAll(getSeries(new File(filenameSensor)));
-        Sensor.setStyle("CHART_COLOR_1: #00FF00;");
-        Teta = getArray(new File(filenameSensor));
-
+            filenameSensor = getClass().getResourceAsStream("/lab1/IMX265LQR_GREEN.csv");
+            Sensor.getData().addAll(getSeries(filenameSensor));
+            Sensor.setStyle("CHART_COLOR_1: #00FF00;");
+            filenameSensor = getClass().getResourceAsStream("/lab1/IMX265LQR_GREEN.csv");
+            Teta = getArray(filenameSensor);
+        } catch (Exception e) {
+        }
 //        HumanVision.getStylesheets().add("/ChartLineStyle.css");
     }
 
-    private XYChart.Series getSeries(File file) {
+    private XYChart.Series getSeries(final String path) {
         CSVReader csvReader = new CSVReader();
-        csvReader.loadFile(file.getAbsolutePath());
+        csvReader.loadFile(path);
         XYChart.Series series = new XYChart.Series();
         for (int i = 0; i < csvReader.getLength(); i++) {
             String xAxis = String.valueOf(csvReader.getX().get(i));
@@ -239,13 +249,33 @@ public class Controller implements Initializable {
         return series;
     }
 
-    private ArrayList<Double> getArray(File file) {
+    private XYChart.Series getSeries(final InputStream path) {
         CSVReader csvReader = new CSVReader();
-        csvReader.loadFile(file.getAbsolutePath());
+        csvReader.loadFile(path);
+        XYChart.Series series = new XYChart.Series();
+        for (int i = 0; i < csvReader.getLength(); i++) {
+            String xAxis = String.valueOf(csvReader.getX().get(i));
+            Double yAxis = csvReader.getY().get(i);
+            series.getData().add(new XYChart.Data(xAxis, yAxis));
+        }
+        return series;
+    }
+
+    private ArrayList<Double> getArray(final InputStream path) {
+        CSVReader csvReader = new CSVReader();
+        csvReader.loadFile(path);
         if (Lambda == null) {
             Lambda = csvReader.getX();
         }
         return csvReader.getY();
     }
 
+    private ArrayList<Double> getArray(final String path) {
+        CSVReader csvReader = new CSVReader();
+        csvReader.loadFile(path);
+        if (Lambda == null) {
+            Lambda = csvReader.getX();
+        }
+        return csvReader.getY();
+    }
 }
