@@ -23,7 +23,6 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class Controller implements Initializable {
-
     private Content content;
     private ArrayList<Double> Nu;
     private ArrayList<Double> F;
